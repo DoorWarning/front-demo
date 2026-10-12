@@ -1,0 +1,19 @@
+name: 작업
+description: 설정, 문서, 리팩터링 등
+title: '[Task] '
+labels: ['task']
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 할 일
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 완료 조건
+      placeholder: |
+        - [ ]
+    validations:
+      required: true

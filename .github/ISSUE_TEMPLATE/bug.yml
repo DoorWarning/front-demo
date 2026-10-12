@@ -1,0 +1,30 @@
+name: 버그 리포트
+description: 잘못된 동작
+title: '[Bug] '
+labels: ['bug']
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 현상
+      description: 기대한 동작과 실제 동작
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: 재현 방법
+      placeholder: |
+        1. 
+        2.
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: 환경
+      placeholder: 브라우저, OS, 화면 크기
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 스크린샷 / 로그

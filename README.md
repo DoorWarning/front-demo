@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 5dots front demo
 
-## Getting Started
+팀 5dots 정보디자인 프로젝트의 프론트엔드 데모. 주제: 플레이어의 콘텐츠 실행 직후 행동 분석.
 
-First, run the development server:
+## 시작하기
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+corepack enable          # pnpm 버전 고정 (package.json의 packageManager)
+pnpm install
+git config commit.template .gitmessage   # 커밋 메시지 양식 (선택)
+pnpm dev                 # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 스택
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · shadcn/ui
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 문서
 
-## Learn More
+| 문서                                         | 내용                                                |
+| -------------------------------------------- | --------------------------------------------------- |
+| [docs/CONVENTION.md](docs/CONVENTION.md)     | 코드 컨벤션 (Airbnb 기반), 폴더 구조, shadcn 사용법 |
+| [docs/GIT_WORKFLOW.md](docs/GIT_WORKFLOW.md) | 브랜치, 커밋 메시지, 이슈, PR 규칙                  |
+| [AGENTS.md](AGENTS.md)                       | Codex 등 AI 에이전트용 규칙                         |
+| [CLAUDE.md](CLAUDE.md)                       | Claude Code용 규칙 (AGENTS.md를 불러옴)             |
 
-To learn more about Next.js, take a look at the following resources:
+## 주요 명령어
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| 명령                                | 설명                                      |
+| ----------------------------------- | ----------------------------------------- |
+| `pnpm check`                        | lint + 포맷 검사 + 타입 검사 (PR 전 필수) |
+| `pnpm build`                        | 프로덕션 빌드                             |
+| `pnpm dlx shadcn@latest add <name>` | shadcn 컴포넌트 추가                      |

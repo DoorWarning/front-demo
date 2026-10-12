@@ -1,0 +1,33 @@
+name: 기능 요청
+description: 새 화면이나 기능
+title: '[Feat] '
+labels: ['feature']
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: 목적
+      description: 누가(어떤 역할이) 이 화면으로 무엇을 판단/개선하는가
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 작업 내용
+      placeholder: |
+        -
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 완료 조건
+      placeholder: |
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: ref
+    attributes:
+      label: 참고 자료
+      description: 디자인, 데이터, 관련 이슈
