@@ -1,4 +1,6 @@
-import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+
+import { buttonVariants } from '@/components/ui/button';
 
 export default function Home() {
   return (
@@ -11,7 +13,9 @@ export default function Home() {
         블루프린트 실행 직후 플레이어가 무엇을 하는지로 콘텐츠의 개선점을 찾습니다.
       </p>
       <div>
-        <Button>시작하기</Button>
+        <Link href="/blueprint-edits" className={buttonVariants()}>
+          블루프린트 수정 3D 데모 (실험)
+        </Link>
       </div>
     </main>
   );
